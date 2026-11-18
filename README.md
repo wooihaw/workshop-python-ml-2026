@@ -1,4 +1,4 @@
-# Modern Python tools and Core Machine Learning Libraries — One-day Workshop
+# Modern Python Tools and Core Machine Learning Libraries — One-day Workshop
 
 Materials for a **one-day hands-on workshop** that combines the essentials of two earlier
 workshops into a single day:
@@ -6,7 +6,7 @@ workshops into a single day:
 - from [Workshop 1](https://github.com/wooihaw/workshop1-tools-2026) — managing a Python project with
   **uv** and versioning and publishing it with **Git** and **GitHub**;
 - from [Workshop 2](https://github.com/wooihaw/workshop2-python-2026) — core Python constructs, then the
-  classical AI library stack: **NumPy → pandas / matplotlib → scikit-learn**.
+  classical ML library stack: **NumPy → pandas / matplotlib → scikit-learn**.
 
 *Assoc. Prof. Dr. Tan Wooi Haw — Faculty of AI and Engineering*
 
