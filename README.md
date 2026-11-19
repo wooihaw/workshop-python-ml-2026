@@ -41,18 +41,23 @@ not the repository URL. It links to the Section 1 hands-on page and the exercise
 
 | Section | Topic | Checkpoint |
 | --- | --- | --- |
-| 1 | Projects with uv and Git — install uv, scaffold a project, `pyproject.toml` and `uv.lock`, dependencies; Git identity, staging and committing, publishing to GitHub | Hands-on: uv and Git, end to end (~25 min) |
+| 1 | Projects with uv and Git — install uv, scaffold a project, `pyproject.toml` and `uv.lock`, dependencies, open the project in JupyterLab; Git identity, staging and committing, publishing to GitHub | Hands-on: uv and Git, end to end (~25 min) |
 | 2 | Syntax, built-in types, collections and dictionaries | Exercise 1 — readings and collections (10 min) |
 | 3 | Conditional branching, iteration, functions and modules | Exercise 2 — branching, loops and functions (15 min) |
 | 4 | Exception management, tracebacks, file I/O | Exercise 3 — robust file processing, uses `readings.csv` (20 min) |
-| 5 | JupyterLab, NumPy, pandas, matplotlib, scikit-learn, saving a model | Exercise 4 — end-to-end mini workflow (25 min) |
+| 5 | NumPy, pandas, matplotlib, scikit-learn, saving a model | Exercise 4 — end-to-end mini workflow (25 min) |
+
+All coding happens in **JupyterLab**: notebooks for exploring, its text editor for `.py` files,
+and its terminal for `uv` and `git`. It is added to the Section 1 project with
+`uv add --dev jupyterlab`, and JupyterLab's `.ipynb_checkpoints/` folders are added to `.gitignore`
+before the first commit.
 
 The day closes with a lab on `data/sensors.csv`: **load → clean → explore → model → extend**,
 where *extend* means trying a second scikit-learn model and comparing the scores.
 
 The appendix of the deck has cheat sheets for uv and Git, and symptom → cause → fix tables for
 the usual setup failures (PATH, execution policy, Git identity, GitHub authentication, `.venv`
-on GitHub, VS Code interpreter selection and Jupyter).
+on GitHub, JupyterLab checkpoint folders and kernels).
 
 ---
 
@@ -61,7 +66,7 @@ on GitHub, VS Code interpreter selection and Jupyter).
 Participants need:
 
 - **A Windows laptop with administrator rights** — Git for Windows needs them to install.
-- **VS Code** with the Python and Jupyter extensions.
+- **A current web browser** — there is no separate editor; all coding happens in JupyterLab.
 - **A GitHub account** with two-factor authentication already set up.
 - **No separate Python install** — uv downloads the interpreter the project pins (3.14).
 

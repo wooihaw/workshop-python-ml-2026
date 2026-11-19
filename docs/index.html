@@ -174,7 +174,7 @@
       <span class="n">01</span>
       <div><h3>Projects with uv and Git</h3>
         <p>Installing uv, scaffolding a project, <code class="inl">pyproject.toml</code> and
-          <code class="inl">uv.lock</code>, dependencies; Git identity, staging and committing, publishing to GitHub</p></div>
+          <code class="inl">uv.lock</code>, dependencies, opening the project in JupyterLab; Git identity, staging and committing, publishing to GitHub</p></div>
       <span class="cp"><a href="uv-git.html">Hands-on</a></span>
     </li>
     <li>
@@ -198,7 +198,7 @@
     <li class="hl">
       <span class="n">05</span>
       <div><h3>Core ML libraries</h3>
-        <p>JupyterLab, NumPy, pandas, matplotlib and scikit-learn; evaluating beyond accuracy; saving a trained model;
+        <p>NumPy, pandas, matplotlib and scikit-learn; evaluating beyond accuracy; saving a trained model;
           the closing lab: load → clean → explore → model → extend</p></div>
       <span class="cp"><a href="exercises.html#ex4">Exercise 4</a></span>
     </li>
@@ -210,7 +210,7 @@
       <h3>Bring</h3>
       <ul class="checks">
         <li><span><b>A Windows laptop with administrator rights</b> — Git for Windows needs them to install.</span></li>
-        <li><span><b>VS Code</b>, with the Python and Jupyter extensions.</span></li>
+        <li><span><b>A current web browser</b> — all coding happens in JupyterLab, which runs in it.</span></li>
         <li><span><b>A GitHub account</b> with two-factor authentication already working on your phone.</span></li>
         <li><span><b>No Python install needed</b> — uv downloads the interpreter the project pins.</span></li>
       </ul>
@@ -232,7 +232,8 @@ cd ai-workshop
 uv python pin 3.14
 uv add numpy pandas matplotlib scikit-learn
 uv add joblib jupyterlab
-uv run python -c "import numpy, pandas, sklearn"</code></pre></div>
+uv run python -c "import numpy, pandas, sklearn"
+uv run jupyter lab</code></pre></div>
       <p style="margin-top:.8rem">Then copy the repository's <code class="inl">data</code> folder into
         <code class="inl">ai-workshop</code>, so the exercises find <code class="inl">data/sensors.csv</code>
         and <code class="inl">data/readings.csv</code>.</p>
