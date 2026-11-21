@@ -227,9 +227,8 @@
       <div class="code"><div class="code-head"><span>PowerShell</span><button class="copy" type="button">Copy</button></div>
 <pre><code>git clone https://github.com/wooihaw/workshop-python-ml-2026.git
 
-uv init ai-workshop
+uv init --python 3.14 ai-workshop
 cd ai-workshop
-uv python pin 3.14
 uv add numpy pandas matplotlib scikit-learn
 uv add joblib jupyterlab
 uv run python -c "import numpy, pandas, sklearn"

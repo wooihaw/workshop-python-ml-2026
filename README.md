@@ -73,7 +73,9 @@ Participants need:
 - **A Windows laptop with administrator rights** — Git for Windows needs them to install.
 - **A current web browser** — there is no separate editor; all coding happens in JupyterLab.
 - **A GitHub account** with two-factor authentication already set up.
-- **No separate Python install** — uv downloads the interpreter the project pins (3.14).
+- **No separate Python install** — uv downloads the interpreter the project pins (3.14). Projects are
+  created with `uv init --python 3.14`; without it, uv picks the newest Python it finds (3.15 on some
+  laptops) and a later `uv python pin 3.14` is refused by the project's `requires-python`.
 
 uv and Git are installed together in Section 1. To save time on the day, participants can
 install both the evening before and pre-download the libraries:
@@ -81,9 +83,8 @@ install both the evening before and pre-download the libraries:
 ```powershell
 git clone https://github.com/wooihaw/workshop-python-ml-2026.git
 
-uv init ai-workshop
+uv init --python 3.14 ai-workshop
 cd ai-workshop
-uv python pin 3.14
 uv add numpy pandas matplotlib scikit-learn
 uv add joblib jupyterlab
 uv run python -c "import numpy, pandas, sklearn"
