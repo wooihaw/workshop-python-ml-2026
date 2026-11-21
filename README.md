@@ -26,7 +26,8 @@ not the repository URL. It links to the Section 1 hands-on page and the exercise
 │   ├── uv-git.html          # Section 1 hands-on: uv and Git, end to end
 │   └── exercises.html       # Exercises 1–4 (Sections 2–5), solutions behind a button
 ├── starter/
-│   └── __init__.py          # the Section 1 program, to copy instead of retype
+│   ├── __init__.py          # the Section 1 program, to copy instead of retype
+│   └── __main__.py          # lets it run as: uv run python -m sensor_analytics
 ├── data/
 │   ├── sensors.csv          # main dataset — Section 5 and the closing lab
 │   └── readings.csv         # deliberately messy file — Exercise 3
@@ -51,6 +52,12 @@ All coding happens in **JupyterLab**: notebooks for exploring, its text editor f
 and its terminal for `uv` and `git`. It is added to the Section 1 project with
 `uv add --dev jupyterlab`, and JupyterLab's `.ipynb_checkpoints/` folders are added to `.gitignore`
 before the first commit.
+
+Every tool is started through Python — `uv run python -m jupyterlab`,
+`uv run python -m sensor_analytics` — never through a generated command such as `uv run jupyter lab`.
+On Windows 11 laptops with **Smart App Control** turned on, the small unsigned `.exe` launchers that
+uv creates in `.venv\Scripts` are blocked with *"An Application Control policy has blocked this file
+(os error 4551)"*, while `python.exe` itself is allowed.
 
 The day closes with a lab on `data/sensors.csv`: **load → clean → explore → model → extend**,
 where *extend* means trying a second scikit-learn model and comparing the scores.
@@ -82,6 +89,7 @@ uv python pin 3.14
 uv add numpy pandas matplotlib scikit-learn
 uv add joblib jupyterlab
 uv run python -c "import numpy, pandas, sklearn"
+uv run python -m jupyterlab
 ```
 
 Then copy the repository's `data/` folder into `ai-workshop/`, so the exercises find
